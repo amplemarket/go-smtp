@@ -326,6 +326,10 @@ func (c *Client) startTLS(config *tls.Config) error {
 	return c.ehlo()
 }
 
+func (c *Client) StartTLS(config *tls.Config) error {
+	return c.startTLS(config)
+}
+
 // TLSConnectionState returns the client's TLS connection state.
 // The return values are their zero values if STARTTLS did
 // not succeed.
